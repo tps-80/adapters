@@ -31,6 +31,9 @@ class App extends Component {
   }
 
   logger() { console.log("you clicked something") }
+  deviceAdder(type) {
+    console.log("inside deviceAdder", type)
+  }
 
   render() {
     return (
@@ -43,7 +46,7 @@ class App extends Component {
           <div onClick={this.logger}>
             Laptop
           </div>
-          <div>
+          <div onClick={() => this.deviceAdder("lappy")}>
             Desktop
           </div>
         </header>
