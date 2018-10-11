@@ -38,8 +38,6 @@ class App extends Component {
     };
   }
 
-
-
   deviceAdder(type) {
     const updatedDevice = this.state.userDevice;
     updatedDevice.type = type;
