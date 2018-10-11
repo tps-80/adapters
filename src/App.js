@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import './App.css';
+import Laptop from './Laptop';
 
 const allDevices = [
   {
@@ -21,18 +23,28 @@ const userDevice = {
     type: "unknown",
 };
 
+const logger = function() {
+  console.log("you clicked something")
+  ReactDOM.render(<Laptop />,document.getElementById('root'));
+}
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       allDevices,
       userDevice,
+      page: 'home',
     };
   }
 
-  logger() { console.log("you clicked something") }
+
+
   deviceAdder(type) {
-    console.log("inside deviceAdder", type)
+    const updatedDevice = this.state.userDevice;
+    updatedDevice.type = type;
+    console.log("inside deviceAdder", updatedDevice)
+    this.setState({userDevice: updatedDevice})
   }
 
   render() {
@@ -43,10 +55,10 @@ class App extends Component {
           <p>
             Which device do you have?
           </p>
-          <div onClick={this.logger}>
+          <div onClick={logger}>
             Laptop
           </div>
-          <div onClick={() => this.deviceAdder("lappy")}>
+          <div onClick={() => this.deviceAdder("compy")}>
             Desktop
           </div>
         </header>
