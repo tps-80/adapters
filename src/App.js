@@ -54,13 +54,10 @@ class App extends Component {
           <p>
             Which device do you have?
           </p>
-          <Device/>
-          <div onClick={this.logger}>
-            Laptop
-          </div>
-          <div onClick={() => this.deviceAdder("compy")}>
+          <Device onClick={this.logger}>Laptop</Device>
+          <Device onClick={() => this.deviceAdder("compy")}>
             Desktop
-          </div>
+          </Device>
         </header>
         <h3>You might have a <br/>
           {this.state.userDevice.type}
@@ -72,8 +69,9 @@ class App extends Component {
 
 class Device extends Component {
   render() {
+    const {onClick,children} = this.props;    
     return(
-      <div>My butt</div>
+      <div onClick={onClick}>{children}</div>
     )
   }
 }
