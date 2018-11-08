@@ -69,4 +69,15 @@ class App extends Component {
   }
 }
 
+class Device extends Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return(
+      <div>My butt</div>
+    )
+  }
+}
+
 export default App;
