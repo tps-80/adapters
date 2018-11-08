@@ -54,6 +54,7 @@ class App extends Component {
           <p>
             Which device do you have?
           </p>
+          <Device/>
           <div onClick={this.logger}>
             Laptop
           </div>
@@ -70,9 +71,6 @@ class App extends Component {
 }
 
 class Device extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return(
       <div>My butt</div>
