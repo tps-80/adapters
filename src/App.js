@@ -79,3 +79,4 @@ class Device extends Component {
 }
 
 export default App;
+export {Device}
