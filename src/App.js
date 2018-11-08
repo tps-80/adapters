@@ -23,11 +23,6 @@ const userDevice = {
     type: "unknown",
 };
 
-const logger = function() {
-  console.log("you clicked something")
-  ReactDOM.render(<Laptop />,document.getElementById('root'));
-}
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -38,11 +33,17 @@ class App extends Component {
     };
   }
 
-  deviceAdder(type) {
-    const updatedDevice = this.state.userDevice;
-    updatedDevice.type = type;
-    console.log("inside deviceAdder", updatedDevice)
-    this.setState({userDevice: updatedDevice})
+  logger() {
+    console.log("you clicked something")
+    ReactDOM.render(<Laptop />,document.getElementById('root'));
+  }
+
+  deviceAdder(deviceType) {
+    // const updatedDevice = this.state.userDevice;
+    // updatedDevice.type = type;
+    // console.log("inside deviceAdder", updatedDevice)
+    this.logger();
+    this.setState({userDevice: { type: deviceType }})
   }
 
   render() {
@@ -53,7 +54,7 @@ class App extends Component {
           <p>
             Which device do you have?
           </p>
-          <div onClick={logger}>
+          <div onClick={this.logger}>
             Laptop
           </div>
           <div onClick={() => this.deviceAdder("compy")}>
