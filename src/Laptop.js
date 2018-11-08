@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import Device from './App';
 import './App.css';
+
 class Laptop extends Component {
   constructor(props) {
     super(props);

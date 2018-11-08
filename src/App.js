@@ -35,7 +35,7 @@ class App extends Component {
 
   logger() {
     console.log("you clicked something")
-    ReactDOM.render(<Laptop userDevice={this.state.userDevice}/>,document.getElementById('root'));
+    ReactDOM.render(<Laptop />,document.getElementById('root'));
   }
 
   deviceAdder(deviceType) {
