@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 class Laptop extends Component {
-
+  constructor(props) {
+    super(props);
+    const {userDevice} = this.props;
+  }
   render() {
     return (
       <div className="App-header">
@@ -14,6 +17,9 @@ class Laptop extends Component {
         <div onClick={() => this.deviceAdder("compy")}>
           Something Older
         </div>
+        <h3>You might have a <br/>
+          {this.userDevice}
+        </h3>
       </div>
     );
   }

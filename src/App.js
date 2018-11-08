@@ -35,7 +35,7 @@ class App extends Component {
 
   logger() {
     console.log("you clicked something")
-    ReactDOM.render(<Laptop />,document.getElementById('root'));
+    ReactDOM.render(<Laptop userDevice={this.state.userDevice}/>,document.getElementById('root'));
   }
 
   deviceAdder(deviceType) {
@@ -54,7 +54,9 @@ class App extends Component {
           <p>
             Which device do you have?
           </p>
-          <Device onClick={this.logger}>Laptop</Device>
+          <Device onClick={() => this.deviceAdder("lappy")}>
+            Laptop
+          </Device>
           <Device onClick={() => this.deviceAdder("compy")}>
             Desktop
           </Device>
