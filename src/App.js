@@ -16,6 +16,10 @@ const allDevices = [
     id: 2,
     type: "iPad"
   },
+  {
+    id: 3,
+    type: "iPhone"
+  },
 ]
 
 const userDevice = {
