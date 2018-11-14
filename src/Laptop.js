@@ -13,10 +13,10 @@ class Laptop extends Component {
         <p>
           Which laptop do you have?
         </p>
-        <div onClick={this.props.logger}>
+        <div onClick={() => this.deviceAdder("MacBook Pro")}>
           MacBook Pro
         </div>
-        <div onClick={() => this.deviceAdder("compy")}>
+        <div onClick={() => this.deviceAdder("Legacy")}>
           Something Older
         </div>
         <h3>You might have a <br/>
