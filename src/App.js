@@ -56,6 +56,11 @@ class App extends Component {
         <header className="App-header">
           {/*<img src={logo} className="App-logo" alt="logo" />*/}
           <p>
+            This is the header
+          </p>  
+        </header>
+        <body className="App-body">
+          <p>
             Which device do you have?
           </p>
           <Device onClick={() => this.deviceAdder("lappy")}>
@@ -64,10 +69,12 @@ class App extends Component {
           <Device onClick={() => this.deviceAdder("compy")}>
             Desktop
           </Device>
-        </header>
-        <h3>You might have a <br/>
-          {this.state.userDevice.type}
-        </h3>
+        </body>
+        <footer className="App-footer">
+          <h3>You might have a <br/>
+            {this.state.userDevice.type}
+          </h3>
+        </footer>
       </div>
     );
   }
