@@ -39,7 +39,7 @@ class App extends Component {
 
   logger() {
     console.log("you clicked something")
-    ReactDOM.render(<Laptop />,document.getElementById('root'));
+    ReactDOM.render(<Laptop />,document.getElementById('body'));
   }
 
   deviceAdder(deviceType) {
@@ -59,7 +59,7 @@ class App extends Component {
             This is the header
           </p>  
         </header>
-        <body className="App-body">
+        <body id="body" className="App-body">
           <p>
             Which device do you have?
           </p>
