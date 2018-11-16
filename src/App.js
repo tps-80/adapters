@@ -27,6 +27,10 @@ const userDevice = {
     type: "unknown",
 };
 
+function logger() {
+  console.log("you clicked something")
+}
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -37,17 +41,15 @@ class App extends Component {
     };
   }
 
-  logger() {
-    console.log("you clicked something")
-    ReactDOM.render(<Laptop />,document.getElementById('body'));
-  }
+
 
   deviceAdder(deviceType) {
     // const updatedDevice = this.state.userDevice;
     // updatedDevice.type = type;
     // console.log("inside deviceAdder", updatedDevice)
-    this.logger();
+    logger();
     this.setState({userDevice: { type: deviceType }})
+    ReactDOM.render(<Laptop />,document.getElementById('body'));
   }
 
   render() {
