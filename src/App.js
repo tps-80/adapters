@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
 import Laptop from './Laptop';
+import Desktop from './Desktop';
 
 const allDevices = [
   {
