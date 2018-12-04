@@ -66,7 +66,7 @@ class App extends Component {
           <p>
             Which device do you have?
           </p>
-          <Device onClick={() => this.deviceAdder("lappy")}>
+          <Device onClick={() => this.deviceAdder("lappy")} logger={this.logger}>
             Laptop
           </Device>
           <Device onClick={() => this.deviceAdder("compy")}>
